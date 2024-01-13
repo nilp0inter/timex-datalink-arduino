@@ -1,4 +1,5 @@
-#define LED_PIN LED_BUILTIN
+#define LED_PIN 2  // External LED
+/* #define LED_PIN 1  // On-board LED */
 
 #define LED_ON_MS_NORMAL 15
 #define LED_OFF_MS_NORMAL 450
