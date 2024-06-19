@@ -3,4 +3,4 @@ profiles:
     fqbn: digistump:avr:digispark-tiny16
     platforms:
       - platform: digistump:avr (1.6.7)
-        platform_index_url: http://digistump.com/package_digistump_index.json
+        platform_index_url: https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
