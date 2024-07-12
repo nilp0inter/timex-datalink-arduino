@@ -13,6 +13,9 @@
         arduino-cli = pkgs.lib.getExe' pkgs.arduino-cli "arduino-cli";
         micronucleus = pkgs.lib.getExe' pkgs.micronucleus "micronucleus";
       in ''
+        export TMPROOT=$(mktemp -d)
+        cp -rf ${./.} "''${TMPROOT}/timex-datalink-arduino"
+        cd "''${TMPROOT}/timex-datalink-arduino"
         ${arduino-cli} compile --profile digispark
         rm -f $HOME/.arduino15/internal/digistump_micronucleus_*_????????????????/micronucleus
         ln -s "${micronucleus}" $HOME/.arduino15/internal/digistump_micronucleus_*_????????????????
