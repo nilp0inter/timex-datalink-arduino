@@ -14,7 +14,7 @@
         micronucleus = pkgs.lib.getExe' pkgs.micronucleus "micronucleus";
       in ''
         ${arduino-cli} compile --profile digispark
-        rm $HOME/.arduino15/internal/digistump_micronucleus_*_????????????????/micronucleus
+        rm -f $HOME/.arduino15/internal/digistump_micronucleus_*_????????????????/micronucleus
         ln -s "${micronucleus}" $HOME/.arduino15/internal/digistump_micronucleus_*_????????????????
         ${arduino-cli} upload --profile digispark
       '';
